@@ -1,6 +1,17 @@
 # bbstom
 Blockbench renderer for Minestom
 
+## Install
+https://repo.emortal.dev/#/snapshots/dev/emortal/bbstom
+```kotlin
+repositories {
+    maven("https://repo.emortal.dev/snapshots")
+}
+dependencies {
+    implementation("dev.emortal:bbstom:<latest commit>")
+}
+```
+
 ## Usage
 To animate a player, you will need the [Stable Player Display resource pack](https://github.com/bradleyq/stable_player_display)
 

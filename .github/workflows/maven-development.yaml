@@ -1,0 +1,12 @@
+name: "Publish to development (snapshot) repo"
+
+on: push
+
+jobs:
+  publish:
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: "emortalmc/actions/java/publish-dev@main"
+        with:
+          maven-username: "${{ secrets.MAVEN_USERNAME }}"
+          maven-password: "${{ secrets.MAVEN_SECRET }}"
