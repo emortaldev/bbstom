@@ -83,6 +83,16 @@ public abstract class PlayerAnimationRenderer extends AnimationRenderer {
         this.rightLeg = spawnEntity(instance, Pos.ZERO, PlayerDisplayPart.RIGHT_LEG, skin);
     }
 
+    @Override
+    void remove() {
+        if (this.head != null) this.head.remove();
+        if (this.torso != null) this.torso.remove();
+        if (this.leftArm != null) this.leftArm.remove();
+        if (this.rightArm != null) this.rightArm.remove();
+        if (this.leftLeg != null) this.leftLeg.remove();
+        if (this.rightLeg != null) this.rightLeg.remove();
+    }
+
     public static Entity spawnEntity(Instance instance, Point position, PlayerDisplayPart part, PlayerSkin skin) {
         Entity entity = new Entity(EntityType.ITEM_DISPLAY);
         entity.setNoGravity(true);

@@ -83,4 +83,7 @@ public abstract class AnimationRenderer {
     }
 
     abstract void render();
+
+    abstract void remove();
+
 }

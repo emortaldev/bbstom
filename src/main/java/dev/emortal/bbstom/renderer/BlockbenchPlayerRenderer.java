@@ -94,6 +94,13 @@ public class BlockbenchPlayerRenderer extends PlayerAnimationRenderer {
         });
     }
 
+    @Override
+    void remove() {
+        super.remove();
+        if (renderTask != null) renderTask.cancel();
+        renderTask = null;
+    }
+
     private void renderEntity(Quaternionf yawQuat, BBModel model, BBAnimation animation, Entity entity, String uuid, float time, Pos pos, PlayerDisplayPart part) {
         Vector3f vec = model.getPosition(animation, time, uuid).div(16);
         yawQuat.transform(vec);
