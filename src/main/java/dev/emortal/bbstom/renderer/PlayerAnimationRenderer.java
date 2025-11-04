@@ -84,7 +84,7 @@ public abstract class PlayerAnimationRenderer extends AnimationRenderer {
     }
 
     @Override
-    void remove() {
+    public void remove() {
         if (this.head != null) this.head.remove();
         if (this.torso != null) this.torso.remove();
         if (this.leftArm != null) this.leftArm.remove();

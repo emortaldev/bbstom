@@ -82,8 +82,8 @@ public abstract class AnimationRenderer {
         this.paused = paused;
     }
 
-    abstract void render();
+    abstract public void render();
 
-    abstract void remove();
+    abstract public void remove();
 
 }

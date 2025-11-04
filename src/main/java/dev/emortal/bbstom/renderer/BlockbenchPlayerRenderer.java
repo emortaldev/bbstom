@@ -95,7 +95,7 @@ public class BlockbenchPlayerRenderer extends PlayerAnimationRenderer {
     }
 
     @Override
-    void remove() {
+    public void remove() {
         super.remove();
         if (renderTask != null) renderTask.cancel();
         renderTask = null;
